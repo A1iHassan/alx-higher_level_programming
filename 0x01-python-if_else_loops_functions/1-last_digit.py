@@ -5,7 +5,7 @@ msg = f"Last digit of {number:d} is {number % 10}"
 if number < 0:
     number = -number
     msg = f"Last digit of -{number:d} is\
-          -{number % 10} and is less than 6 and not 0"
+ -{number % 10} and is less than 6 and not 0"
     print(msg)
 elif number % 10 > 5:
     print(f"{msg} and is greater than 5")
