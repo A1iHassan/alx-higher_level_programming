@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import random
-number = -89
+number = random.randint(-10000, 10000)
 msg = f"Last digit of {number:d} is {number % 10}"
 if number < 0:
     number = -number
