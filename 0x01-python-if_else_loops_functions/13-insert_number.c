@@ -4,23 +4,43 @@ listint_t *insert_node(listint_t **head, int number)
 {
   listint_t *cursor = *head, *temp = NULL, *temp2 = cursor;
 
-  while (cursor)
+  temp = malloc(sizeof(listint_t));
+  if (temp == NULL)
   {
-    if (cursor->n > number)
+    free(temp);
+    return (NULL);
+  }
+  temp->n = number;
+  if (*head == NULL)
+  {
+    *head = temp;
+    temp->next = NULL;
+  }
+  else
+  {
+    while (cursor)
     {
-      temp = malloc(sizeof(listint_t));
-      if (temp == NULL)
+      if (cursor->n > number)
+      {
+        if (cursor == *head)
         {
-          free(temp);
-          return (NULL);
+          *head = temp;
+          temp->next = cursor;
+          return (temp);
         }
-      temp->n = number;
-      temp->next = temp2->next;
-      temp2->next = temp;
-      return (temp);
+        else
+        {
+          temp2->next = temp;
+          temp->next = cursor;
+          return (temp);
+        }
+      }
+      temp2 = cursor;
+      cursor = cursor->next;
     }
-    temp2 = cursor;
-    cursor = cursor->next;
+    temp2->next = temp;
+    temp->next = NULL;
+    return (temp);
   }
   return (NULL);
 }

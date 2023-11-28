@@ -22,7 +22,7 @@ int main(void)
 
     printf("-----------------\n");
 
-    insert_node(&head, -8);
+    insert_node(&head, 8000);
 
     print_listint(head);
 
