@@ -6,7 +6,8 @@ int is_palindrome(listint_t **head)
   listint_t *cursor = *head, *temp = *head;
   int i = 0, *j, k = 0;
 
-
+  if (!*head)
+    return (1);
   while (temp)
   {
     temp = temp->next;
