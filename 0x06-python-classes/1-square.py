@@ -12,7 +12,7 @@ class Square:
     this class defines a square with all its necessary attributes
 
     Attributes:
-        _size: square size.
+        __size: square size.
     """
 
     def __init__(self, size):
@@ -21,4 +21,4 @@ class Square:
         Args:
             size: sets the _size attribute
         """
-        self._size = size
+        self.__size = size
