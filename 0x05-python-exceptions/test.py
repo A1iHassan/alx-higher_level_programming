@@ -17,3 +17,7 @@ print("nb_print: {:d}".format(nb_print))
 my_list = ["Holberton", 1, 2, "H", 3, 4, [1, 2, 3,4]]
 nb_print = safe_print_list_integers(my_list, len(my_list))
 print("nb_print: {:d}".format(nb_print))
+
+my_list = []
+nb_print = safe_print_list_integers(my_list, 0)
+print("nb_print: {:d}".format(nb_print))
