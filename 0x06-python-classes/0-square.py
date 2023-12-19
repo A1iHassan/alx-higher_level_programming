@@ -15,5 +15,4 @@ class Square:
         no attributes defined yet.
     """
 
-
     pass
