@@ -5,6 +5,7 @@
 this module defines an empty class named Square
 """
 
+
 class Square:
     """an empty class.
 
@@ -14,5 +15,5 @@ class Square:
         no attributes defined yet.
     """
 
-    
+
     pass
