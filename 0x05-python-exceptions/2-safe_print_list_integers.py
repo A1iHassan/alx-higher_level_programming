@@ -4,7 +4,7 @@ def safe_print_list_integers(my_list=[], x=0):
     try:
         for i in range(x):
             if type(x) == int:
-                print("{:d}".format(x), end="")
+                print("{:d}".format(my_list[i]), end="")
                 count += 1
     except IndexError:
         print()
