@@ -6,13 +6,12 @@ this module is dedicated to contain all ncessary data for the Rectangle class
 """
 
 
-
 class Rectangle:
     """a new class for Rectangle data type"""
 
     def __init__(self, width=0, height=0):
         """initializes new instances
-        
+
         Args:
             width: rectangle width
             height: rectangle height
@@ -23,7 +22,7 @@ class Rectangle:
     @property
     def width(self):
         """retrieves the width
-        
+
         Return:
             __width
         """
@@ -32,7 +31,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """setter for __width
-        
+
         Args:
             vlaue: new __width value
         """
@@ -53,7 +52,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """setter for __height
-        
+
         Args:
             value: new __height value
         """
