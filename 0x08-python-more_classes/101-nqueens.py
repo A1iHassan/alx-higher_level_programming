@@ -12,11 +12,10 @@ def is_safe(board, row, col, n):
 
 
 def print_solution(board):
-    """Print the chessboard with queens placed."""
+    """Print the positions of queens for the current solution."""
     n = len(board)
-    for row in range(n):
-        line = ["Q" if i == board[row] else "." for i in range(n)]
-        print("".join(line))
+    solution = [[row, col] for row, col in enumerate(board)]
+    print(solution)
     print()
 
 
