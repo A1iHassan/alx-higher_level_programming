@@ -8,7 +8,7 @@ this module is dedicated to contain all ncessary data for the Rectangle class
 
 class Rectangle:
     """a new class for Rectangle data type"""
-    
+
     def __init__(self, width=0, height=0):
         """initializes new instances
 
@@ -64,7 +64,7 @@ class Rectangle:
 
     def area(self):
         """calculates the area of the rectangle
-        
+
         Return:
             _width * "_height
         """
@@ -72,7 +72,7 @@ class Rectangle:
 
     def perimeter(self):
         """calculates the perirmeter of the rectangle
-        
+
         Return:
             perimeter
         """
