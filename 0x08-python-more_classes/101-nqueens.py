@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col, n):
     """Check if placing a queen in a specific position is safe."""
     for i in range(row):
-        if board[i] == col or board[i] - i == col - row or board[i] + i == col + row:
+        if (board[i] == col or
+                board[i] - i == col - row or board[i] + i == col + row):
             return False
     return True
+
 
 def print_solution(board):
     """Print the chessboard with queens placed."""
@@ -15,6 +18,7 @@ def print_solution(board):
         line = ["Q" if i == board[row] else "." for i in range(n)]
         print("".join(line))
     print()
+
 
 def solve_nqueens(board, row, n):
     """Recursively solve the N-Queens problem."""
@@ -26,6 +30,7 @@ def solve_nqueens(board, row, n):
         if is_safe(board, row, col, n):
             board[row] = col
             solve_nqueens(board, row + 1, n)
+
 
 def nqueens(N):
     """Main function to solve the N-Queens problem."""
@@ -41,6 +46,7 @@ def nqueens(N):
 
     board = [-1] * n
     solve_nqueens(board, 0, n)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
