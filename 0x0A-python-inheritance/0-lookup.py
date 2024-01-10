@@ -9,7 +9,7 @@ def lookup(obj):
 
     Args:
         obj: wanted object
-    
+
     Return:
         list of obj's attributes
     """
