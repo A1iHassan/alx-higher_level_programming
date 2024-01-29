@@ -46,7 +46,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         else:
-            x = str(Rectangle.print_symbol)
+            x = Rectangle.print_symbol
             for i in range(self.__height):
                 x += x * self.__width + "\n"
             return x.rstrip('\n')
