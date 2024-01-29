@@ -74,7 +74,7 @@ class Rectangle:
             width x height
         """
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """calculates the perimeter of the rectangle,
         if one dimention is 0, returns 0
