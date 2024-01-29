@@ -24,12 +24,12 @@ class Rectangle:
         else:
             self.__width = width
             self.__height = height
-    
+
     @property
     def width(self):
         """a getter property for the width attribute"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """a setter property for the width attribute
@@ -48,7 +48,7 @@ class Rectangle:
     def height(self):
         """a getter property for the height attribute"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """a setter property for the height attribute
