@@ -22,7 +22,7 @@ class Rectangle:
         Arges:
             size: square dimentions
         """
-        return Rectangle(size, size)
+        return cls(size, size)
 
     def __init__(self, width=0, height=0):
         """function called when creatint a new instance
