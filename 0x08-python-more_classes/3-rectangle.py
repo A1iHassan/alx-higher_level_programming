@@ -38,7 +38,7 @@ class Rectangle:
             x = ""
             for i in range(self.__height):
                 x += "#" * self.__width + "\n"
-            return x
+            return x.rstrip('\n')
 
     @property
     def width(self):
