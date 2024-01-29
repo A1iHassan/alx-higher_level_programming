@@ -46,7 +46,7 @@ class Rectangle:
         Return:
             formal representation
         """
-        return "Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     @property
     def width(self):
