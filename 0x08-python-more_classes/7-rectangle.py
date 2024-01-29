@@ -48,7 +48,7 @@ class Rectangle:
         else:
             x = str(Rectangle.print_symbol)
             for i in range(self.__height):
-                x += "#" * self.__width + "\n"
+                x += x * self.__width + "\n"
             return x.rstrip('\n')
 
     def __repr__(self):
