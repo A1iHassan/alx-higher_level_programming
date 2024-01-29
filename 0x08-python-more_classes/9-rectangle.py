@@ -16,6 +16,7 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
+    @classmethod
     def square(cls, size=0):
         """creates a new square instance
 
