@@ -31,7 +31,7 @@ class Rectangle(BaseGeometry):
             a str type
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
-    
+
     def area(self):
         """calculates the area
         over-writes the super-class's method 'area()'
