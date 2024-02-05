@@ -7,8 +7,8 @@ class MyInt(int):
 
     def __eq__(self, value):
         """will behave as the != operator"""
-        return self > value or self < value
+        return super().__ne__(value)
 
     def __ne__(self, value):
         """will behave as the == operator"""
-        return not self > value and not self < value
+        return super().__eq__(value)
