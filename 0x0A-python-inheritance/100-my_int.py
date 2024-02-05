@@ -5,10 +5,10 @@
 class MyInt(int):
     """a subclass from int"""
 
-    def __eq__(self, __value: object):
+    def __eq__(self, value):
         """will behave as the != operator"""
-        return self > __value or self < __value
+        return self > value or self < value
 
-    def __ne__(self, __value: object):
+    def __ne__(self, value):
         """will behave as the == operator"""
-        return not self > __value and not self < __value
+        return not self > value and not self < value
