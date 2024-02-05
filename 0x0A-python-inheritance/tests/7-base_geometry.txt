@@ -16,7 +16,7 @@ missing the ``value`` argument and the ``name`` argument
     >>> b.integer_validator()
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
 missing the ``value`` argument
 
