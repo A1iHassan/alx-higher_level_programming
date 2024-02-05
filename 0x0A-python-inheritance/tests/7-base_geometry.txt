@@ -45,7 +45,7 @@ with correct arguments
     >>> b.integer_validator("name", 5.6)
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 ``value`` is less than 0
 
@@ -53,7 +53,7 @@ with correct arguments
     >>> b.integer_validator("name", -2)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: name must be greater than 0
 
 ``value`` is equal to 0
 
@@ -61,4 +61,4 @@ with correct arguments
     >>> b.integer_validator("name", 0)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: name must be greater than 0
