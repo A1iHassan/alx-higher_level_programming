@@ -10,6 +10,14 @@ first we import the module
 
 now we test the ``integer_validator`` instance method
 
+missing the ``value`` argument and the ``name`` argument
+
+    >>> b = base
+    >>> b.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
 missing the ``value`` argument
 
     >>> b = base()
