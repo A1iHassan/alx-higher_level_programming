@@ -15,7 +15,7 @@ save = __import__("5-save_to_json_file").save_to_json_file
 try:
     old_content = load("add_item.json")
     old_content.extend(content)
-except:
+except FileNotFoundError:
     old_content = content
 
 save(old_content, "add_item.json")
