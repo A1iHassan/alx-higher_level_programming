@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """a module for task 6
 
-a function that creates an Object from a 
+a function that creates an Object from a
 “JSON file”
 """
 
@@ -10,7 +10,7 @@ import json
 
 
 def load_from_json_file(filename):
-    """a function that creates an Object from a 
+    """a function that creates an Object from a
     “JSON file”
 
     Args:
