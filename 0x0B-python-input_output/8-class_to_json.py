@@ -8,7 +8,8 @@ for JSON serialization of an object
 
 
 def class_to_json(obj):
-    """Returns a dictionary description of the object suitable for JSON serialization.
+    """Returns a dictionary description of
+    the object suitable for JSON serialization.
 
     Args:
         obj: An instance of a class.
@@ -27,4 +28,3 @@ def class_to_json(obj):
             obj_dict[key] = class_to_json(value)
 
     return obj_dict
-
