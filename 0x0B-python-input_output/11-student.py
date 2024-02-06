@@ -40,7 +40,8 @@ class Student:
                     in attrs if hasattr(self, attr)}
 
     def reload_from_json(self, json):
-        """Replace all attributes of the Student instance with the values from the provided dictionary.
+        """Replace all attributes of the Student
+        instance with the values from the provided dictionary.
 
         Args:
             json (dict): Dictionary containing attribute names and values.
