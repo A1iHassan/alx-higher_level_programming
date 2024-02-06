@@ -9,8 +9,9 @@ import sys
 
 
 content = sys.argv[1:]
-load = __import__("6-load_from_json_file").load_from_json_file
-save = __import__("5-save_to_json_file").save_to_json_file
+with open("add_item.json", "w", encoding="utf-8") as f:
+    load = __import__("6-load_from_json_file").load_from_json_file
+    save = __import__("5-save_to_json_file").save_to_json_file
 
-content.append(load("add_item.json"))
-save(content, "add_item.json")
+    content.append(load(f))
+    save(content, f)
