@@ -42,5 +42,5 @@ class Student:
                 instance_dict[key] = list(value)
             elif hasattr(value, '__dict__'):
                 instance_dict[key] = self.to_json(value)
-        
+
         return instance_dict
