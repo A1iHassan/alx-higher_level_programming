@@ -15,15 +15,8 @@ def add_attribute(obj, name, atr):
         name: attribute key
         atr: attribute value
     """
-    def __exit__(exc_type, exc_value, traceback):
-        """determines the action when exiting
-        a context manager block
-        """
-        if exc_type:
-            raise TypeError("can't add new attribute")
 
-    obj.__exit__ = __exit__
-
-    with obj as obj:
-        obj_dict = obj.__dict__
-        obj_dict[name] = atr
+    if hasattr(obj, '__dict__') or hasattr(type(obj), '__dict__'):
+        setattr(obj, name, atr)
+    else:
+        raise TypeError("can't add new attribute")
