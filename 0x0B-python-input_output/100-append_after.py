@@ -26,5 +26,5 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in line:
                 f.write(new_string)
 
-append_after("append_after_100.txt", "Python", "\"C is fun!\"\n")
 
+append_after("append_after_100.txt", "Python", "\"C is fun!\"\n")
