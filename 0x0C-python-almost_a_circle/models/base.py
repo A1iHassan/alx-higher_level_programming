@@ -97,3 +97,91 @@ class Base:
         except FileNotFoundError:
             return []
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """saves a list of instances to a file as
+        a CSV text
+    
+        Args:
+            list_objs: list of instances of the same type
+        """
+        with open(cls.__name__ + ".csv", 'w', encoding="utf-8") as f:
+            if cls.__name__ == "Rectangle":
+                for i in list_objs:
+                    line = f"{i['id']},{i['width']},{i['height']},{i['x']},{i['y']}\n"
+                    f.write(line)
+            elif cls.__name__ == "Square":
+                for i in list_objs:
+                    line = f"{i['id']},{i['size']},{i['x']},{i['y']}"
+                    f.write(line)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """loads a list of instances from a file
+        containing CSV data
+
+        Return:
+            list of intances
+        """
+        try:
+            with open(cls.__name__ + ".csv", 'r', encoding="utf-8") as f:
+                list_string = f.read()
+                list_instances = list_string.split(',')
+                dummy = cls.__init__(0, 0, 0, 0)
+                return [dummy.update(None, i) for i in list_instances]
+        except FileNotFoundError:
+            return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles
+        and Squares
+
+        Args:
+            list_rectangles: ...
+            list_squares: ...
+        """
+        import turtle
+
+
+        screen = turtle.Screen()
+        t = turtle.Turtle()
+
+        t.penup()
+        t.left(90)
+        t.forward(500)
+        t.left(90)
+        t.forward(500)
+        t.right(180)
+        t.pendown()
+        for i in list_rectangles:
+            t.penup()
+            t.forward(i.x())
+            t.right(90)
+            t.forward(i.y())
+            t.left(90)
+            t.pendown()
+            t.forward(i.width())
+            t.right(90)
+            t.forward(i.height())
+            t.right(90)
+            t.forward(i.width())
+            t.right(90)
+            t.forward(i.height())
+            t.right(90)
+        for i in list_squares:
+            t.penup()
+            t.forward(i.x())
+            t.right(90)
+            t.forward(i.y())
+            t.left(90)
+            t.pendown()
+            t.forward(i.width())
+            t.right(90)
+            t.forward(i.height())
+            t.right(90)
+            t.forward(i.width())
+            t.right(90)
+            t.forward(i.height())
+            t.right(90)
+        screen.mainloop()
