@@ -3,9 +3,9 @@ let x = [];
 process.argv.splice(2).forEach(element => {
 	x.push(+element);
 });
-x.splice(x.indexOf(Math.max(...x)))
-if (x.length === 0 || x.length === 1) {
+if (x.length <= 3) {
 	console.log(0);
 } else {
-	console.log(Math.max(...x));
+	x.sort((a, b) => b - a);
+	console.log(x[1]);
 }
