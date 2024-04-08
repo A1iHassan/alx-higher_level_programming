@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const x = new Set();
+let x = [];
 process.argv.splice(2).forEach(element => {
-  x.add(+element);
+	x.push(+element);
 });
-x.splice(x.indexOf(Math.max(...x)));
+x.splice(x.indexOf(Math.max(...x)))
 console.log(Math.max(...x));
