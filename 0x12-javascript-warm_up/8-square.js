@@ -1,8 +1,8 @@
 #!/usr/bin/node
 let x;
-if ((x = -(-process.argv[2]))) {
+if ((x = +process.argv[2])) {
   for (let i = 0; i < x; i++) {
-    console.log('X' * x);
+    console.log('X'.repeat(x));
   }
 } else {
   console.log('Missing size');
