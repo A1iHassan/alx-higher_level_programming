@@ -1,11 +1,11 @@
 #!/usr/bin/node
-let x = [];
+const x = [];
 process.argv.splice(2).forEach(element => {
-	x.push(+element);
+  x.push(+element);
 });
 if (x.length <= 3) {
-	console.log(0);
+  console.log(0);
 } else {
-	x.sort((a, b) => b - a);
-	console.log(x[1]);
+  x.sort((a, b) => b - a);
+  console.log(x[1]);
 }
