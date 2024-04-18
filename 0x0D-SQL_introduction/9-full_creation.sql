@@ -7,9 +7,6 @@ CREATE TABLE IF NOT EXISTS second_table (
 	score INT
 );
 
--- starts perfoming operations on the table
-USE second_table;
-
 -- add data to the table
 INSERT INTO second_table (id, name, score) VALUES
 (1, 'Jhon', 10),
