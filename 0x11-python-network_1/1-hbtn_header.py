@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from sys import argv
-from urllib.request import urlopen as req
+import sys
+import urllib.request
 
 
-url = argv[1]
-with req(url) as response:
+url = sys.argv[1]
+with urllib.request.urlopen(url) as response:
 	print(response.info().get('X-Request-Id'))
