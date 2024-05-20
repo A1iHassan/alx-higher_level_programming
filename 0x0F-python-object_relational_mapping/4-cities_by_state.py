@@ -20,7 +20,10 @@ if __name__ == '__main__':
     )
 
     cursor = database.cursor()
-    cursor.execute(f'SELECT * FROM cities ORDER BY id ASC;')
+    cursor.execute("""SELECT cities.id, cities.name, states.name
+                   FROM cities
+                   JOIN states ON cities.state_id = states.id
+                   ORDER BY cities.id ASC;""")
     results = cursor.fetchall()
     for line in results:
         print(line)
