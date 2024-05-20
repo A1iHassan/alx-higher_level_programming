@@ -1,23 +1,23 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
-    
-	import MySQLdb
-	import sys
 
-	user_name = sys.argv[1]
-	pass_word = sys.argv[2]
-	d_b = sys.argv[3]
+    import MySQLdb
+    import sys
 
-	database = MySQLdb.connect(
-		host='localhost',
-		username=user_name,
-		password = pass_word,
-		db=d_b,
-		port=3306
-	)
+    user_name = sys.argv[1]
+    pass_word = sys.argv[2]
+    d_b = sys.argv[3]
 
-	cursor = database.cursor()
-	cursor.execute(f'SELECT * FROM {d_b}')
-	results = cursor.fetchall()
-	for line in results:
-		print(line)
+    database = MySQLdb.connect(
+        host='localhost',
+        username=user_name,
+        password=pass_word,
+        db=d_b,
+        port=3306
+    )
+
+    cursor = database.cursor()
+    cursor.execute(f'SELECT * FROM {d_b}')
+    results = cursor.fetchall()
+    for line in results:
+        print(line)
