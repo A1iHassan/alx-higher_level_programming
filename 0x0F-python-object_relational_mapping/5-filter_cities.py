@@ -20,7 +20,7 @@ if __name__ == '__main__':
     )
 
     cursor = database.cursor()
-    cursor.execute("""SELECT cities.id, cities.name, states.name
+    cursor.execute("""SELECT cities.name
                    FROM cities
                    JOIN states ON cities.state_id = states.id
                    WHERE states.name LIKE %s
