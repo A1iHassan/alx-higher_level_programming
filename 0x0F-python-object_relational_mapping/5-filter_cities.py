@@ -23,7 +23,7 @@ if __name__ == '__main__':
     cursor.execute("""SELECT cities.id, cities.name, states.name
                    FROM cities
                    JOIN states ON cities.state_id = states.id
-                   WHERE states.name = %s
+                   WHERE states.name LIKE %s
                    ORDER BY cities.id ASC;""", (sys.arg[4],))
     results = cursor.fetchall()
     for line in results:
