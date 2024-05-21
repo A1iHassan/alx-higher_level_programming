@@ -21,6 +21,8 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     states = session.query(State).filter(
         State.name == argv[4]).order_by(State.id).all()
+    if not states:
+        print("Nothing")
     for state in states:
-        print(f"{state.id}: {state.name}")
+        print(state.id)
     session.close()
