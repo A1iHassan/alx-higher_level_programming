@@ -21,6 +21,7 @@ if __name__ == '__main__':
     session.add(
         State(name='Louisiana')
     )
+    session.commit()
     Base.metadata.create_all(engine)
     states = session.query(State).filter(
         State.name == 'Louisiana').order_by(State.id).all()
