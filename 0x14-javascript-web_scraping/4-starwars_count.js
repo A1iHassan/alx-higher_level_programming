@@ -6,11 +6,12 @@ request(process.argv[2], (err, response, body) => {
     console.log(err);
   } else {
     const movies = JSON.parse(body).results;
-    const character = 'https://swapi-api.alx-tools.com/api/people/18/';
     movies.forEach((element, index) => {
-      if (element.characters.includes(character)) {
-        i += 1;
-      }
+      element.characters.forEach((el, ind) => {
+        if (el.includes('/18/')) {
+          i += 1;
+        }
+      });
     });
     console.log(i);
   }
