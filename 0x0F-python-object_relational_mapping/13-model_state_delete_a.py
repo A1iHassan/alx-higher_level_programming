@@ -20,10 +20,11 @@ if __name__ == '__main__':
     session = Session()
     Base.metadata.create_all(engine)
     try:
-        state_to_delete = session.query(
-            State).filter(State.id == 2).one_or_none()
-        if state_to_delete:
-            session.delete(state_to_delete)
+        states_to_delete = session.query(
+            State).filter(State.name.like('%a%')).all()
+        if states_to_delete:
+            for state in states_to_delete:
+                session.delete(state)
             session.commit()
     except Exception as e:
         session.rollback()
