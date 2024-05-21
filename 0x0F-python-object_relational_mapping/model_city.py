@@ -9,7 +9,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
 
-
 class City(Base):
     """
     a class that maps to the cities table
