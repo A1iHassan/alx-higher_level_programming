@@ -8,7 +8,6 @@ request(process.argv[2], (err, response, body) => {
     const movies = JSON.parse(body).results;
     const character = 'https://swapi-api.alx-tools.com/api/people/18/';
     movies.forEach((element, index) => {
-      console.log(element);
       if (element.characters.includes(character)) {
         i += 1;
       }
