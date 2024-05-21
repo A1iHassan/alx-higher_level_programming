@@ -22,7 +22,7 @@ if __name__ == '__main__':
     states = session.query(State).filter(
         State.name == argv[4]).order_by(State.id).all()
     if not states:
-        print("Nothing")
+        print("Not found")
     for state in states:
         print(state.id)
     session.close()
